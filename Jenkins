@@ -1,18 +1,12 @@
 pipeline{
     agent any
     stages("different statge "){
-        
-        stage("git"){
-            steps{
-        sh "git clone https://github.com/zafar-khan123/dec-demo.git"
-            }
-        
-        }
 
         stage("Build"){
             steps{
                 echo "Building code using jenkins"
             }
+            
         }
         
         stage("Testing"){
