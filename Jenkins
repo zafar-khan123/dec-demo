@@ -1,6 +1,13 @@
 pipeline{
     agent any
     stages("different statge "){
+        
+        stage("git"){
+            steps{
+            git()
+            }
+        
+        }
 
         stage("Build"){
             steps{
