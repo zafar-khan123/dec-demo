@@ -6,7 +6,6 @@ pipeline{
             steps{
                 echo "Building code using jenkins"
             }
-            
         }
         
         stage("Testing"){
