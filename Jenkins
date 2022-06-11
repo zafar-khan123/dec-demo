@@ -1,6 +1,12 @@
 pipeline{
     agent any
     stages("different statge "){
+    
+        stage("Pull sourcecode from GITHUB"){
+        steps{
+        git branch: 'main', url: 'https://github.com/zafar-khan123/dec-demo.git'
+             }
+        }
 
         stage("Build"){
             steps{
