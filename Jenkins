@@ -4,7 +4,7 @@ pipeline{
         
         stage("git"){
             steps{
-        sh "git clone https://github.com/zafar-khan123/dec-demo.git"
+        sh git branch: 'main', url: 'https://github.com/zafar-khan123/dec-demo.git'
             }
         
         }
