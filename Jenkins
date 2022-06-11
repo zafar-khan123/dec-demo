@@ -1,24 +1,24 @@
 pipeline{
     agent any
-    stages("different statge "){
+    stages('different statge '){
   
-        stage("Build"){
+        stage('Build'){
             steps{
-                echo "Building code using jenkins"
+                echo 'Building code using jenkins'
             }
             
         }
         
-        stage("Testing"){
+        stage('Testing'){
             steps{
-                echo "Testing code"
+                echo 'Testing code'
             }
             
         }
         
-        stage("Deploy"){
+        stage('Deploy'){
             steps{
-                echo "Deploying code"
+                echo 'Deploying code'
             }
         }
     }
