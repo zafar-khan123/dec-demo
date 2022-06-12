@@ -4,7 +4,6 @@ pipeline{
   
         stage('Build docker image'){
             steps{
-            sh 'FROM ubuntu'
             sh 'docker image build -t $JOB_NAME:v1.$BUILD_ID .'
             sh 'docker image tag $JOB_NAME:v1.$BUILD_ID zk0034630/$JOB_NAME:v1.$BUILD_ID '
             sh 'docker image tag $JOB_NAME:v1.$BUILD_ID zk0034630/$JOB_NAME:latest'
