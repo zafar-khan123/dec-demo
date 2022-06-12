@@ -23,7 +23,7 @@ pipeline{
         }
         stage('Say Congrates'){
             steps{
-                echo 'Congratulation for this successful deployment'
+                echo 'Congratulation for this successful deployment...wow'
             }
             
         }
