@@ -2,9 +2,11 @@ pipeline{
     agent any
     stages('different statge '){
   
-        stage('Build'){
+        stage('Build docker image'){
             steps{
-                echo 'Building code using jenkins'
+            sh 'docker image build -t $JOB_NAME:v1.$BUILD_ID .'
+            sh 'docker image tag $JOB_NAME:v1.$BUILD_ID zk0034630/$JOB_NAME:v1.$BUILD_ID '
+            sh 'docker image tag $JOB_NAME:v1.$BUILD_ID zk0034630/$JOB_NAME:latest'
             }
             
         }
